@@ -1,0 +1,38 @@
+@import "../../assets/styles/common.scss";
+
+#highlights-section {
+  background-color: "white";
+  padding: 0 30px;
+  margin-top: 100px;
+  max-width: 100%;
+  .article1 {
+    width: 100%;
+    padding: 20px 25%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    h1 {
+      color: $text-color;
+      width: 50%;
+    }
+    div {
+      button {
+        background-color: $yellow-color;
+        align-self: center;
+        color: $text-color;
+        font-size: 16pt;
+        font-weight: normal;
+        padding: 12px;
+      }
+    }
+  }
+  .article2 {
+    img {
+      width: 450px;
+      height: 500px;
+      border-radius: $border-radius;
+      position: relative;
+      top: 50px;
+    }
+  }
+}

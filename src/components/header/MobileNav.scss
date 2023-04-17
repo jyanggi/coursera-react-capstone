@@ -1,0 +1,139 @@
+@import "../../assets/styles/common.scss";
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  &.is-hidden {
+    height: 0;
+    overflow: hidden;
+  }
+
+  &__overlay {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: #000;
+    opacity: 0;
+    transition: all 250ms linear;
+    cursor: pointer;
+
+    &.is-visible {
+      opacity: 0.4;
+    }
+  }
+
+  &__drawer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 80vw;
+    height: 100vh;
+    z-index: 2;
+    transform: translateX(-80vw);
+    transition: all 250ms ease;
+    background-color: $primary-color-dark;
+    color: $light-color;
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    hr,
+    a {
+      color: $light-color;
+    }
+    .mobile-nav-logo {
+      margin: 10px;
+      .mobile-nav-logo-img {
+        height: 80px;
+      }
+      .mobile-nav-contact {
+        float: right;
+        margin-top: 30px;
+        a {
+          padding: 10px;
+          text-decoration: none;
+          color: $light-gray-color;
+          &:hover {
+            color: $primary-color-light;
+          }
+        }
+      }
+    }
+    .mobile-nav-body {
+      overflow-y: auto;
+      flex: 1;
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        li {
+          padding: 10px;
+          &:hover,
+          &:focus {
+            background-color: $primary-color-light;
+            transition: all 400ms ease !important;
+            a.active {
+              color: $light-color;
+            }
+          }
+          a {
+            display: block;
+            padding-left: 20px;
+            outline: none;
+            text-decoration: none;
+            font-size: 1.2em;
+            &.active {
+              color: $primary-color-light;
+            }
+          }
+        }
+      }
+    }
+    .mobile-nav-footer {
+      width: 100%;
+      bottom: 5px;
+      .mobile-nav-footer-content {
+        font-size: 0.9em;
+        padding: 10px 15px;
+        a {
+          text-decoration: none;
+          color: $light-gray-color;
+          &:hover {
+            color: $primary-color-light;
+          }
+        }
+        .social {
+          float: right;
+          i {
+            padding: 20px 10px;
+            font-size: 1.3em;
+          }
+        }
+        &-bottom {
+          margin-top: 50px;
+          @media (max-height: 280px) {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+    &.is-visible {
+      transform: translateX(0);
+    }
+  }
+}
+
+.push-by-menu {
+  transition: all 400ms ease !important;
+  transform: translateX(0);
+  &.is-pushed {
+    transform: translateX(200px);
+  }
+}

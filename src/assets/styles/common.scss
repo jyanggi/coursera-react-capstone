@@ -1,0 +1,33 @@
+@import "variables.scss";
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Markazi Text";
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+main {
+  max-width: 100%;
+}
+h1 {
+  font-size: 64pt;
+  font-weight: normal;
+  margin: 0;
+}
+h2 {
+  font-size: 40pt;
+  font-weight: normal;
+  margin: 0;
+}
+
+p {
+  font-size: 18pt;
+  font-weight: normal;
+}
+
+button {
+  border-radius: $border-radius;
+}

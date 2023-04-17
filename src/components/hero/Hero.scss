@@ -1,0 +1,37 @@
+@import "../../assets/styles/common.scss";
+
+#hero-section {
+  background-color: $green-color;
+  display: grid;
+  gap: 100px;
+  grid-template-columns: 7fr 5fr;
+  padding: 0 30px;
+  max-width: 100%;
+  .article1 {
+    padding: 20px;
+    margin-left: 40%;
+    h1 {
+      color: $yellow-color;
+    }
+    button {
+      background-color: $yellow-color;
+      color: $text-color;
+      font-size: 16pt;
+      font-weight: normal;
+      padding: 12px;
+    }
+    h2,
+    p {
+      color: white;
+    }
+  }
+  .article2 {
+    img {
+      width: 450px;
+      height: 500px;
+      border-radius: $border-radius;
+      position: relative;
+      top: 50px;
+    }
+  }
+}
