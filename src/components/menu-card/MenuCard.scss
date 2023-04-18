@@ -1,0 +1,27 @@
+@import "../../assets/styles/common.scss";
+
+.menu-card {
+  background-color: $grey-color;
+  border-radius: $border-radius;
+  display: flex;
+  @media (max-width: 720px) {
+		width: 100%;
+    max-width: 100%;
+	}
+  flex-direction: column;
+  max-width: 350px;
+  p, h4{
+    padding: 20px;
+  }
+  img {
+    @media (max-width: 720px) {
+      width: 100%;
+      max-width: 100%;
+      max-height: max-content;
+    }
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+    max-width: 350px;
+    max-height: 233px;
+  }
+}

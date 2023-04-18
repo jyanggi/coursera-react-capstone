@@ -16,11 +16,18 @@ h1 {
   font-size: 64pt;
   font-weight: normal;
   margin: 0;
+  @media (max-width: 720px) {
+    font-size: 40pt;
+  }
 }
 h2 {
   font-size: 40pt;
   font-weight: normal;
   margin: 0;
+  @media (max-width: 720px) {
+    font-size: 24pt;
+  }
+
 }
 
 p {

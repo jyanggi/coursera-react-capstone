@@ -2,9 +2,9 @@ import logo from "./Logo.svg";
 import "./Header.scss";
 
 const SECTIONS = [
-  { title: "HOME", id: "#home" },
+  { title: "HOME", id: "#hero-section" },
   { title: "ABOUT", id: "#about" },
-  { title: "MENU", id: "#home" },
+  { title: "MENU", id: "#menu-section" },
   { title: "ORDER ONLINE", id: "#home" },
   { title: "LOGIN", id: "#home" },
 ];
