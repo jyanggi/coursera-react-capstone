@@ -40,7 +40,7 @@ const Highlights = () => {
       </article>
       <article className="menu">
         {MENU.map((m) => (
-          <MenuCard {...m} />
+          <MenuCard key={m.name} {...m} />
         ))}
       </article>
     </section>

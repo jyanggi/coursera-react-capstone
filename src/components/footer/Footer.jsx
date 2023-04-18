@@ -1,14 +1,7 @@
 import logo from "./footerlogo.png";
 import "./Footer.scss";
 
-const SECTIONS = [
-  { title: "HOME", id: "#hero-section" },
-  { title: "ABOUT", id: "#about" },
-  { title: "MENU", id: "#menu-section" },
-  { title: "ORDER ONLINE", id: "#home" },
-  { title: "LOGIN", id: "#home" },
-];
-
+import { handleClick, SECTIONS } from "../../util/Utils";
 const CONTACTS = [
   { title: "Address", url: "https://maps.google.com/?q=Chicago" },
   { title: "Phone Number", url: "tel:1234567890" },
@@ -32,7 +25,15 @@ function Footer() {
           <h2>Navigation</h2>
           {SECTIONS.map((p) => (
             <li key={p.id}>
-              <a href={p.id}>{p.title}</a>
+              <a
+                href={p.id}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleClick(p.id);
+                }}
+              >
+                {p.title}
+              </a>
             </li>
           ))}
         </ul>

@@ -14,7 +14,7 @@ const Rating = (props) => {
         {Array(props.rating)
           .fill(1)
           .map((_, i) => (
-            <span>&#9733;</span>
+            <span key={i}>&#9733;</span>
           ))}
       </h5>
       <h5>{props.rating}/5</h5>

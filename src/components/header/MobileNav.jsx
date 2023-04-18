@@ -3,13 +3,7 @@ import "./MobileNav.scss";
 import React, { useState, useEffect, useRef } from "react";
 import { MdClose } from "react-icons/md";
 import { FiMenu } from "react-icons/fi";
-const SECTIONS = [
-  { title: "HOME", id: "#hero-section" },
-  { title: "ABOUT", id: "#about-section" },
-  { title: "MENU", id: "#menu-section" },
-  { title: "ORDER ONLINE", id: "#home" },
-  { title: "LOGIN", id: "#home" },
-];
+import { handleClick, SECTIONS } from "../../util/Utils";
 function MobileNav() {
   const [isHidden, setIsHidden] = useState(true);
   const navRef = useRef();
@@ -48,7 +42,15 @@ function MobileNav() {
         <ul>
           {SECTIONS.map((p) => (
             <li key={p.id}>
-              <a href={p.id}>{p.title}</a>
+              <a
+                href={p.id}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleClick(p.id);
+                }}
+              >
+                {p.title}
+              </a>
             </li>
           ))}
         </ul>

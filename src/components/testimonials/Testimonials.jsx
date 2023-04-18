@@ -34,7 +34,7 @@ const Testimonials = () => {
       <h2>Testimonials</h2>
       <article className="menu">
         {RATINGS.map((m) => (
-          <Rating {...m} />
+          <Rating key={m.name} {...m} />
         ))}
       </article>
     </section>

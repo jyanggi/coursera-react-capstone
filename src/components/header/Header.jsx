@@ -1,13 +1,7 @@
 import logo from "./Logo.svg";
 import "./Header.scss";
+import { handleClick, SECTIONS } from "../../util/Utils";
 
-const SECTIONS = [
-  { title: "HOME", id: "#hero-section" },
-  { title: "ABOUT", id: "#about-section" },
-  { title: "MENU", id: "#menu-section" },
-  { title: "ORDER ONLINE", id: "#home" },
-  { title: "LOGIN", id: "#home" },
-];
 function Header() {
   return (
     <header id="header-nav">
@@ -15,8 +9,16 @@ function Header() {
       <nav>
         <ul>
           {SECTIONS.map((p) => (
-            <li key={p.id}>
-              <a href={p.id}>{p.title}</a>
+            <li key={"header-" + p.id}>
+              <a
+                href={p.id}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleClick(p.id);
+                }}
+              >
+                {p.title}
+              </a>
             </li>
           ))}
         </ul>
