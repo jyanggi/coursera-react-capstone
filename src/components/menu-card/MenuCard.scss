@@ -5,13 +5,22 @@
   border-radius: $border-radius;
   display: flex;
   @media (max-width: 720px) {
-		width: 100%;
+    width: 100%;
     max-width: 100%;
-	}
+  }
   flex-direction: column;
   max-width: 350px;
-  p, h4{
+  p,
+  h4 {
     padding: 20px;
+  }
+  h4 {
+    font-weight: lighter;
+    > :nth-child(2) {
+      color: $orange-color;
+      font-size: 18pt;
+      float: right;
+    }
   }
   img {
     @media (max-width: 720px) {
