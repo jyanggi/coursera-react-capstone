@@ -37,10 +37,10 @@ h4 {
 }
 
 h5 {
-    font-size: 20pt;
-    font-weight: normal;
-    margin: 0;
-  }
+  font-size: 20pt;
+  font-weight: normal;
+  margin: 0;
+}
 
 p {
   font-size: 18pt;
@@ -49,4 +49,12 @@ p {
 
 button {
   border-radius: $border-radius;
+}
+
+a {
+  text-decoration: none;
+}
+a:active,
+a:hover {
+  color: $yellow-color;
 }

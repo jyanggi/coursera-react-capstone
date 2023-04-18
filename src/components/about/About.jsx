@@ -1,5 +1,6 @@
 import "./About.scss";
 import img1 from "./Mario and Adrian A.jpg";
+import img2 from "./Mario and Adrian b.jpg";
 
 const About = () => {
   return (
@@ -16,7 +17,8 @@ const About = () => {
         </p>
       </article>
       <article className="article2">
-        <img src={img1} alt="Mariano and Adrian" />
+        <img className="img1" src={img1} alt="Mariano and Adrian" />
+        <img className="img2" src={img2} alt="Mariano and Adrian" />
       </article>
     </section>
   );

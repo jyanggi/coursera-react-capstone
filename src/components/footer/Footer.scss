@@ -1,0 +1,59 @@
+@import "../../assets/styles/common.scss";
+
+footer {
+  padding: 30px;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 100%;
+  background-color: $grey-color;
+  @media (max-width: 720px) {
+    flex-direction: column;
+    align-items: start;
+  }
+  .logo {
+    @media (max-width: 720px) {
+      margin: 0;
+    }
+    margin-left: 50%;
+    width: 100px;
+    height: 180px;
+  }
+  section {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    @media (max-width: 720px) {
+      flex-direction: column;
+      width: 100%;
+      align-items: start;
+      margin-bottom: 30px;
+    }
+    align-items: center;
+    h2 {
+      font-size: 18pt;
+      font-weight: bold;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+    background-color: $grey-color;
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-self: start;
+      text-align: left;
+      list-style-type: none;
+      @media (max-width: 720px) {
+        padding: 10px;
+      }
+      a {
+        display: inline;
+        text-decoration: none;
+        font-size: 18pt;
+        color: $text-color;
+      }
+    }
+  }
+}
