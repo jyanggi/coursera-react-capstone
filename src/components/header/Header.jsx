@@ -3,14 +3,14 @@ import "./Header.scss";
 
 const SECTIONS = [
   { title: "HOME", id: "#hero-section" },
-  { title: "ABOUT", id: "#about" },
+  { title: "ABOUT", id: "#about-section" },
   { title: "MENU", id: "#menu-section" },
   { title: "ORDER ONLINE", id: "#home" },
   { title: "LOGIN", id: "#home" },
 ];
 function Header() {
   return (
-    <header>
+    <header id="header-nav">
       <img className="logo" src={logo} alt="header logo" />
       <nav>
         <ul>
