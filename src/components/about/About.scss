@@ -1,0 +1,47 @@
+@import "../../assets/styles/common.scss";
+
+#about-section {
+  background-color: white;
+  display: grid;
+  gap: 100px;
+  grid-template-columns: 7fr 5fr;
+  padding: 0 30px;
+  margin: 50px 0;
+  max-width: 100%;
+  @media (max-width: 720px) {
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    padding: 10px 10px;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .article1 {
+    padding: 20px;
+    margin-left: 40%;
+    @media (max-width: 1000px) {
+      margin: 10px;
+    }
+  }
+  .article2 {
+    @media (max-width: 720px) {
+      margin: 0;
+      align-items: center;
+    }
+    img {
+      width: 450px;
+      height: 500px;
+      border-radius: $border-radius;
+      position: relative;
+      object-fit: cover;
+      top: 50px;
+      @media (max-width: 720px) {
+        width: 95%;
+        height: 300px;
+        padding: 5px;
+        border-radius: $border-radius;
+        top: auto;
+      }
+    }
+  }
+}
