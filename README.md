@@ -2,6 +2,9 @@
 
 Coursera Meta Front End Developer Capston by johnguaz
 
+##Live demo
+Click [here](https://little-lemon.incrementtum.click/)
+
 ## Added unit tests
 ![unit-test](/doc/unit-test.png)
 
