@@ -1,0 +1,33 @@
+@import "../../assets/styles/common.scss";
+
+.reservation-form {
+  &-heading {
+    color: $text-color;
+    font-size: 40pt;
+    padding: 20px;
+  }
+  background-color: $grey-color;
+  width: 100%;
+  label {
+    color: $text-color;
+    font-weight: lighter;
+    font-size: 18pt;
+  }
+  .error {
+    color: $orange-color;
+    font-weight: lighter;
+    font-size: 18pt;
+  }
+  input,
+  select {
+    font-weight: lighter;
+    font-size: 18pt;
+    width: 100%;
+  }
+  textarea{
+    font-size: 18pt;
+  }
+  .submit {
+    margin: 50px;
+  }
+}

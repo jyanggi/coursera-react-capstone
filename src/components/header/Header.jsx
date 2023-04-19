@@ -1,27 +1,17 @@
 import logo from "./Logo.svg";
 import "./Header.scss";
-import { handleClick, SECTIONS } from "../../util/Utils";
+import NavList from "../nav-list/NavList";
+import { NavLink } from "react-router-dom";
 
 function Header() {
   return (
     <header id="header-nav">
-      <img className="logo" src={logo} alt="header logo" />
+      <NavLink to="/">
+        <img className="logo" src={logo} alt="header logo" />
+      </NavLink>
+
       <nav>
-        <ul>
-          {SECTIONS.map((p) => (
-            <li key={"header-" + p.id}>
-              <a
-                href={p.id}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleClick(p.id);
-                }}
-              >
-                {p.title}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <NavList />
       </nav>
     </header>
   );

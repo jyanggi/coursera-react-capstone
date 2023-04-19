@@ -3,7 +3,8 @@ import "./MobileNav.scss";
 import React, { useState, useEffect, useRef } from "react";
 import { MdClose } from "react-icons/md";
 import { FiMenu } from "react-icons/fi";
-import { handleClick, SECTIONS } from "../../util/Utils";
+import NavList from "../nav-list/NavList";
+import { NavLink } from "react-router-dom";
 function MobileNav() {
   const [isHidden, setIsHidden] = useState(true);
   const navRef = useRef();
@@ -21,7 +22,9 @@ function MobileNav() {
   }, [navRef]);
   return (
     <header id="mobile-nav">
-      <img className="logo" src={logo} alt="header logo" />
+      <NavLink to="/">
+        <img className="logo" src={logo} alt="header logo" />
+      </NavLink>
       <section className="burger-container">
         <button className="burger" onClick={() => setIsHidden((prev) => !prev)}>
           {isHidden ? (
@@ -38,22 +41,14 @@ function MobileNav() {
       </section>
 
       <nav ref={navRef} className={isHidden ? "hidden" : "show"}>
-        <img src={logo} alt="header logo" />
-        <ul>
-          {SECTIONS.map((p) => (
-            <li key={p.id}>
-              <a
-                href={p.id}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleClick(p.id);
-                }}
-              >
-                {p.title}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <NavLink to="/" onClick={() => setIsHidden(true)}>
+          <img src={logo} alt="header logo" />
+        </NavLink>
+        <NavList
+          callBack={() => {
+            setIsHidden(true);
+          }}
+        />
       </nav>
     </header>
   );

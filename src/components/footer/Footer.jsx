@@ -1,7 +1,7 @@
 import logo from "./footerlogo.png";
 import "./Footer.scss";
 
-import { handleClick, SECTIONS } from "../../util/Utils";
+import NavList from "../nav-list/NavList";
 const CONTACTS = [
   { title: "Address", url: "https://maps.google.com/?q=Chicago" },
   { title: "Phone Number", url: "tel:1234567890" },
@@ -21,22 +21,9 @@ function Footer() {
         <img className="logo" src={logo} alt="footer logo" />
       </section>
       <section>
-        <ul>
-          <h2>Navigation</h2>
-          {SECTIONS.map((p) => (
-            <li key={p.id}>
-              <a
-                href={p.id}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleClick(p.id);
-                }}
-              >
-                {p.title}
-              </a>
-            </li>
-          ))}
-        </ul>
+        <div>
+          <NavList header="Navigation" />
+        </div>
         <ul>
           <h2>Contact</h2>
           {CONTACTS.map((p) => (

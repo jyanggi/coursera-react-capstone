@@ -48,13 +48,23 @@ p {
 }
 
 button {
+  background-color: $yellow-color;
+  color: $text-color;
+  font-size: 16pt;
+  font-weight: normal;
+  padding: 12px;
   border-radius: $border-radius;
+  cursor: pointer;
+  &:hover {
+    background-color: $orange-color;
+  }
 }
 
 a {
   text-decoration: none;
-}
-a:active,
-a:hover {
-  color: $yellow-color;
+  color: $text-color;
+  &:active,
+  &:hover {
+    color: $yellow-color;
+  }
 }

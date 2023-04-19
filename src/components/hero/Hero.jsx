@@ -1,5 +1,6 @@
 import "./Hero.scss";
 import heroImage from "./restauranfood.jpg";
+import { NavLink } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -11,7 +12,9 @@ const Hero = () => {
           We are a family owned Mediterranean restaurant, focused on traditional
           recipes served with a modern twist.
         </p>
-        <button>Reserve a table</button>
+        <NavLink to="/reservation">
+          <button>Reserve a table</button>
+        </NavLink>
       </article>
       <article className="article2">
         <img src={heroImage} alt="Restaurant food" />

@@ -35,7 +35,7 @@ const Highlights = () => {
       <article className="menu-header">
         <h1>This weeks specials!</h1>
         <div>
-          <button>Online Menu</button>
+          <button id="online-menu">Online Menu</button>
         </div>
       </article>
       <article className="menu">

@@ -7,7 +7,10 @@
   max-width: 100%;
   position: sticky;
   display: grid;
-  grid-template-columns: 6fr 6fr;
+  grid-template-columns: 5fr 7fr;
+  @media (max-width: 1200px) {
+    grid-template-columns: 4fr 8fr;
+  }
   max-width: 100%;
   z-index: 999;
   background-color: white;
@@ -35,11 +38,10 @@
         display: inline;
         text-decoration: none;
         font-size: 18pt;
-        @media (max-width: 1000px) {
-          padding: 5px;
+        @media (max-width: 1200px) {
+          padding: 10px;
           font-size: 14pt;
         }
-        color: $text-color;
       }
     }
   }

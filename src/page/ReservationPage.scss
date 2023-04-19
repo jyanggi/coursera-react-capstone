@@ -1,0 +1,54 @@
+@import "../assets/styles/common.scss";
+
+.reservation-page {
+  justify-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 20px;
+  @media (max-width: 1500px) {
+    display: block;
+    padding: 20px;
+  }
+  background-color: $green-color;
+  padding: 150px;
+  .heading {
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+    h1 {
+      color: $yellow-color;
+      margin: 2px;
+    }
+    p {
+      font-size: 24pt;
+    }
+    p,
+    h2,
+    h3 {
+      margin: 2px;
+      color: white;
+    }
+  }
+
+  .heading-images {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 50px;
+    @media (max-width: 1500px) {
+      flex-direction: row;
+      column-gap: 20px;
+    }
+    article {
+      img {
+        @media (max-width: 1200px) {
+          flex-direction: row;
+          width: 150px;
+          justify-content: center;
+          column-gap: 20px;
+        }
+        width: 500px;
+      }
+    }
+  }
+}

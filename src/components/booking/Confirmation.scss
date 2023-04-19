@@ -1,0 +1,16 @@
+@import "../../assets/styles/common.scss";
+
+.confirmation-card {
+  text-align: center;
+  background-color: $grey-color;
+  padding: 100px;
+  align-items: center;
+  .confirmation-details {
+    font-size: 18pt;
+    text-align: left;
+    svg{
+      margin-right: 15px;
+      color: green;
+    }
+  }
+}
